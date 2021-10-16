@@ -39,6 +39,7 @@ export type ConfigType = {
 
 type RequireKeys = 'el'
 
-export type HTMLListElement = HTMLElement & {
-  _state: { menu?: HTMLElement }
+export enum LayoutMenuDirection {
+  Left = -1,
+  Right = 1
 }
