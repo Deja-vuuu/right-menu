@@ -14,7 +14,7 @@ const ReactRightMenu = memo((props)=> {
     <React.Fragment>
       {
         React.Children.map(props.children, (element) => {
-          return (React.createElement('div', null, element))
+          return (React.createElement('div', { className: 'container', ref: myRef }, element))
         })
       }
     </React.Fragment>
