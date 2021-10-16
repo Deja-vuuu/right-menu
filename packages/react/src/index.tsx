@@ -1,6 +1,10 @@
-import React, { useEffect,useRef } from 'react'
+import React, { memo, useEffect,useRef } from 'react'
 import RightMenu from '@right-menu/core'
-const ReactRightMenu = (props)=> {
+
+// type IReactRightMenuProps = {
+//   options:
+// }
+const ReactRightMenu = memo((props)=> {
   console.log(props)
   const myRef = useRef()
   useEffect(()=>{
@@ -10,11 +14,11 @@ const ReactRightMenu = (props)=> {
     <React.Fragment>
       {
         React.Children.map(props.children, (element) => {
-          return (React.createElement('div', { className: 'container', ref: myRef }, element))
+          return (React.createElement('div', null, element))
         })
       }
     </React.Fragment>
   )
-}
+})
 
 export default ReactRightMenu
