@@ -1,6 +1,6 @@
 import Vue from 'vue'
 import App from './Demo.vue'
-import rightMenu from './index.js'
+import rightMenu from '@right-menu/core'
 import { name, version } from '../package.json'
 
 const sleep = (wait) => new Promise(resolve => setTimeout(resolve, wait))

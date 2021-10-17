@@ -27,7 +27,7 @@ export type ItemType = AttrsType & (
 )
 
 export type ConfigType = {
-  el: string
+  el: string | HTMLElement
   theme?: string // 主题样式, 默认为auto
   beforeInit?: Function // 初始化前
   afterInit?: Function // 初始化后
